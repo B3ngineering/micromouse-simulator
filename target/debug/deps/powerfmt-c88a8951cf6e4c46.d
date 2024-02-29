@@ -1,0 +1,11 @@
+C:\Users\benge\Programming\micromouse-sim-rust\target\debug\deps\powerfmt-c88a8951cf6e4c46.rmeta: C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\powerfmt-0.2.0\src\lib.rs C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\powerfmt-0.2.0\src\buf.rs C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\powerfmt-0.2.0\src\ext.rs C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\powerfmt-0.2.0\src\smart_display.rs C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\powerfmt-0.2.0\src\smart_display_impls.rs
+
+C:\Users\benge\Programming\micromouse-sim-rust\target\debug\deps\libpowerfmt-c88a8951cf6e4c46.rlib: C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\powerfmt-0.2.0\src\lib.rs C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\powerfmt-0.2.0\src\buf.rs C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\powerfmt-0.2.0\src\ext.rs C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\powerfmt-0.2.0\src\smart_display.rs C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\powerfmt-0.2.0\src\smart_display_impls.rs
+
+C:\Users\benge\Programming\micromouse-sim-rust\target\debug\deps\powerfmt-c88a8951cf6e4c46.d: C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\powerfmt-0.2.0\src\lib.rs C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\powerfmt-0.2.0\src\buf.rs C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\powerfmt-0.2.0\src\ext.rs C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\powerfmt-0.2.0\src\smart_display.rs C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\powerfmt-0.2.0\src\smart_display_impls.rs
+
+C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\powerfmt-0.2.0\src\lib.rs:
+C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\powerfmt-0.2.0\src\buf.rs:
+C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\powerfmt-0.2.0\src\ext.rs:
+C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\powerfmt-0.2.0\src\smart_display.rs:
+C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\powerfmt-0.2.0\src\smart_display_impls.rs:

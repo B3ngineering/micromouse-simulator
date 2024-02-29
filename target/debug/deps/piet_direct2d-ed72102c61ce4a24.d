@@ -1,0 +1,11 @@
+C:\Users\benge\Programming\micromouse-sim-rust\target\debug\deps\piet_direct2d-ed72102c61ce4a24.rmeta: C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\piet-direct2d-0.6.2\src\lib.rs C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\piet-direct2d-0.6.2\src\conv.rs C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\piet-direct2d-0.6.2\src\d2d.rs C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\piet-direct2d-0.6.2\src\d3d.rs C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\piet-direct2d-0.6.2\src\dwrite.rs C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\piet-direct2d-0.6.2\src\text.rs C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\piet-direct2d-0.6.2\src\text\lines.rs
+
+C:\Users\benge\Programming\micromouse-sim-rust\target\debug\deps\piet_direct2d-ed72102c61ce4a24.d: C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\piet-direct2d-0.6.2\src\lib.rs C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\piet-direct2d-0.6.2\src\conv.rs C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\piet-direct2d-0.6.2\src\d2d.rs C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\piet-direct2d-0.6.2\src\d3d.rs C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\piet-direct2d-0.6.2\src\dwrite.rs C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\piet-direct2d-0.6.2\src\text.rs C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\piet-direct2d-0.6.2\src\text\lines.rs
+
+C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\piet-direct2d-0.6.2\src\lib.rs:
+C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\piet-direct2d-0.6.2\src\conv.rs:
+C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\piet-direct2d-0.6.2\src\d2d.rs:
+C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\piet-direct2d-0.6.2\src\d3d.rs:
+C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\piet-direct2d-0.6.2\src\dwrite.rs:
+C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\piet-direct2d-0.6.2\src\text.rs:
+C:\Users\benge\.cargo\registry\src\index.crates.io-6f17d22bba15001f\piet-direct2d-0.6.2\src\text\lines.rs:
