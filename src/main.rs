@@ -1,16 +1,30 @@
 mod mouse;
 mod maze;
+mod astar;
+use std::vec;
 use std::sync::Arc;
-
 use druid::kurbo::{Point, Size};
+use druid::text;
 use druid::widget::prelude::*;
-use druid::{widget::{Button, Flex, Painter}, AppLauncher, Color, Data, Lens, Widget, WidgetExt, WindowDesc};
-
+use druid::{widget::{Button, Flex, Label, Painter}, AppLauncher, Color, Data, Lens, Widget, WidgetExt, WindowDesc};
+use std::thread;
+use std::time::Duration;
+// use druid::widget::Controller;
+// use mini_redis::client;
 #[derive(Clone, Data, Lens)]
 
 struct CompData {
     mouse: mouse::Mouse,
     maze: maze::Maze,
+    path: Arc<Vec<(i32, i32)>>
+}
+
+fn traverse_path(data: &mut CompData) {
+   for node in (*data.path).clone() {
+       data.mouse.x = node.0;
+       data.mouse.y = -node.1;
+       thread::sleep(Duration::from_millis(50));
+   }
 }
 
 fn ui_builder() -> impl Widget<CompData> {
@@ -29,10 +43,17 @@ fn ui_builder() -> impl Widget<CompData> {
                 // Highlight the mouse position
                 if i == data.mouse.x as usize && j == -data.mouse.y as usize {
                     ctx.fill(rect, &Color::RED);
+                } else if data.path.contains(&(i.try_into().unwrap(), j.try_into().unwrap())) {
+                    ctx.fill(rect, &Color::BLUE); // Highlight color for specific cells
+                    
                 }
             }
         }
     }).fix_size(200.0, 200.0); // Fixed size for simplicity
+
+    let mouse_position_label = Label::dynamic(|data: &CompData, _env| {
+        format!("Mouse Position: ({}, {})", data.mouse.x, -data.mouse.y)
+    });
 
     let north_button = Button::new("North")
         .on_click(|_ctx, data: &mut CompData, _env| data.mouse.move_north());
@@ -42,10 +63,20 @@ fn ui_builder() -> impl Widget<CompData> {
         .on_click(|_ctx, data: &mut CompData, _env| data.mouse.move_east());
     let west_button = Button::new("West")
         .on_click(|_ctx, data: &mut CompData, _env| data.mouse.move_west());
-
+    let astar_button = Button::new("A-Star")
+       .on_click(|_ctx, data: &mut CompData, _env| {  data.path = astar::astar((1, 1), (13, 13), (*data.maze.grid).clone()).into()});
+    let clear_button = Button::new("Reset")
+       .on_click(|_ctx, data: &mut CompData, _env| {
+        data.path = Arc::new(Vec::new());
+        data.mouse.x = 1;
+        data.mouse.y = -1;
+    });
+    let traverse_button = Button::new("Traverse")
+       .on_click(|_ctx, data: &mut CompData, _env| traverse_path(data));
 
     Flex::column()
     .with_child(maze_painter)
+    .with_child(mouse_position_label)
     .with_spacer(8.0)
     .with_child(
         Flex::row()
@@ -54,6 +85,9 @@ fn ui_builder() -> impl Widget<CompData> {
             .with_child(south_button)
             .with_child(east_button)
             .with_child(west_button)
+            .with_child(astar_button)
+            .with_child(clear_button)
+            .with_child(traverse_button)
             .with_flex_spacer(1.0),
     )
 }
@@ -77,6 +111,8 @@ fn main() {
         vec![1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
         vec![1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
     ];
+    
+
     let arc_maze_grid = Arc::new(maze_grid);
     //Window
     //Launch
@@ -86,6 +122,7 @@ fn main() {
     let initial_state = CompData {
         mouse: mouse::Mouse::new(1, -1), // Starting position of the mouse
         maze: maze::Maze::new(arc_maze_grid),
+        path: Arc::new(vec![])
     };
     AppLauncher::with_window(main_window)
         .launch(initial_state)

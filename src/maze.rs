@@ -8,10 +8,9 @@ pub struct Maze {
 impl Maze {
     pub fn new(grid:Arc<Vec<Vec<i32>>>) -> Self {
         Maze { grid }
-        
     }
 
-    pub fn is_wall(&self, y: i32, x:i32) -> bool {
+    pub fn is_wall(&self, x: i32, y:i32) -> bool {
         if self.grid[y as usize][x as usize] == 1 { return true}
         else {return false};
     }

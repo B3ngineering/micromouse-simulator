@@ -7,3 +7,5 @@ edition = "2021"
 
 [dependencies]
 druid = { git = "https://github.com/linebender/druid.git" }
+tokio = { version = "1", features = ["full"] }
+mini-redis = "0.4"
