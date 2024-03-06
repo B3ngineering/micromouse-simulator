@@ -1,3 +1,7 @@
 {
-    "ros.distro": "foxy"
+
+    "rust-analyzer.linkedProjects": [
+        ".\\Cargo.toml",
+        ".\\Cargo.toml"
+    ]
 }
