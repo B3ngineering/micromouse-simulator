@@ -64,12 +64,11 @@ pub fn astar(start: (i32, i32), goal: (i32, i32), maze: Vec<Vec<i32>>) -> Vec<(i
         heuristic: heuristic(&start, &goal),
     });
     g_score.insert(start, 0);
-    print!("Running Astar");
     while let Some(current) = open_set.pop() {
-        print!("({}, {})", current.position.0, current.position.1);
         if current.position == goal {
             // Reconstruct path
             let mut path = Vec::new();
+            path.push((1,1));
             let mut current_pos = goal;
             while current_pos != start {
                 path.push(current_pos);
@@ -77,7 +76,6 @@ pub fn astar(start: (i32, i32), goal: (i32, i32), maze: Vec<Vec<i32>>) -> Vec<(i
             }
             path.push(start);
             path.reverse();
-            for node in &path { print!("Official path: ({}, {})", node.0, node.1)}
             return path;
         }
 

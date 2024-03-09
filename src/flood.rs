@@ -29,6 +29,7 @@ pub fn flood_fill(mouse: &mut Mouse, maze: &Maze, target_x: usize, target_y: usi
 pub fn navigate_maze(mouse: &mut Mouse, maze: &Maze, distances: Vec<Vec<i32>>) -> Vec<(i32, i32)> {
     let (mut x, mut y) = (mouse.x as usize, -mouse.y as usize);
     let mut path = Vec::new();
+    path.push((1,1));
 
     while distances[x][y] != 0 {
         let neighbors = maze.get_neighbors(x, y);
