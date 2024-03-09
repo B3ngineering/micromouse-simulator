@@ -24,5 +24,33 @@ impl Maze {
             println!();
         }
     }
+
+    pub fn get_neighbors(&self, row: usize, col: usize) -> Vec<(usize, usize)> {
+        let mut neighbors = Vec::new();
+        let rows = self.grid.len();
+        let cols = self.grid[0].len();
+    
+        // Check above
+        if row > 0 && self.grid[row - 1][col] == 0 {
+            neighbors.push((row - 1, col));
+        }
+    
+        // Check below
+        if row + 1 < rows && self.grid[row + 1][col] == 0 {
+            neighbors.push((row + 1, col));
+        }
+    
+        // Check left
+        if col > 0 && self.grid[row][col - 1] == 0 {
+            neighbors.push((row, col - 1));
+        }
+    
+        // Check right
+        if col + 1 < cols && self.grid[row][col + 1] == 0 {
+            neighbors.push((row, col + 1));
+        }
+    
+        neighbors
+    }
 }
 

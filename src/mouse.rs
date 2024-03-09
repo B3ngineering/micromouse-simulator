@@ -1,4 +1,4 @@
-use druid::{Data, ExtEventSink, Lens};
+use druid::{Data, Lens};
 #[derive(Clone, Copy, Data, Lens)]
     pub struct Mouse {
         pub x: i32,
@@ -32,9 +32,9 @@ use druid::{Data, ExtEventSink, Lens};
             print!("({}, {})", self.x, self.y);
         }
 
-        pub fn move_by(&mut self, dx: i32, dy: i32) {
-            self.x += dx;
-            self.y -= dy;
+        pub fn move_to(&mut self, x: i32, y: i32) {
+            self.x = x;
+            self.y = -y;
         }
 
         pub fn get_position(&self) -> (i32, i32) {
@@ -44,24 +44,4 @@ use druid::{Data, ExtEventSink, Lens};
         pub fn print_position(&self) {
             println!("Mouse Position: ({}, {})", self.x, self.y);
         }
-
-        pub async fn travel_path (&mut self, event_sink: ExtEventSink, path: Vec<(i32, i32)>) {
-//             for node in path {
-//                 if node.0 > self.x { self.move_east()}
-//                 else if node.0 < self.x {self.move_west()}
-//                 else if node.1 > self.y {self.move_south()}
-//                 else if node.1 < self.y {self.move_north()}
-
-//                 sleep(Duration::from_millis(100)).await;
-// sleep(Duration::from_millis(100)).await;
-//                 if event_sink
-//             .submit_command(UPDATE_UI, *self, druid::Target::Auto)
-//             .is_err()
-//         {
-//             eprintln!("Failed to send command to update UI.");
-//             break;
-//         }
-//             }
-        }
-
     }
