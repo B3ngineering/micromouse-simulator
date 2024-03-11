@@ -13,9 +13,9 @@ North, South, East, and West buttons. There is a Reset button to return to the o
 
 ## Demo
 
-<iframe src="https://uofwaterloo-my.sharepoint.com/personal/b9young_uwaterloo_ca/_layouts/15/embed.aspx?UniqueId=9f9e2659-0fc0-4e04-9227-8e265b02923d&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="Recording-20240310_203124.webm"></iframe>
+[Here](https://youtu.be/1F_-CBph6FM) is a Youtube link displaying the current functionality.
 
-### Getting Started
+## Getting Started
 
 - Rust and Cargo can be installed according to [these](https://doc.rust-lang.org/cargo/getting-started/installation.html) instructions.
 - Druid can be installed from [here](https://github.com/linebender/druid).
