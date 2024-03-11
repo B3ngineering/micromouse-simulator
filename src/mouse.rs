@@ -14,22 +14,18 @@ use druid::{Data, Lens};
 
         pub fn move_north(&mut self) {
             self.y += 1;
-            print!("({}, {})", self.x, self.y);
         }
 
         pub fn move_south(&mut self) {
             self.y -= 1;
-            print!("({}, {})", self.x, self.y);
         }
 
         pub fn move_east(&mut self) {
             self.x += 1;
-            print!("({}, {})", self.x, self.y);
         }
 
         pub fn move_west(&mut self) {
             self.x -= 1;
-            print!("({}, {})", self.x, self.y);
         }
 
         pub fn move_to(&mut self, x: i32, y: i32) {

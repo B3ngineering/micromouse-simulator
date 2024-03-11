@@ -68,7 +68,6 @@ pub fn astar(start: (i32, i32), goal: (i32, i32), maze: Vec<Vec<i32>>) -> Vec<(i
         if current.position == goal {
             // Reconstruct path
             let mut path = Vec::new();
-            path.push((1,1));
             let mut current_pos = goal;
             while current_pos != start {
                 path.push(current_pos);
@@ -92,10 +91,7 @@ pub fn astar(start: (i32, i32), goal: (i32, i32), maze: Vec<Vec<i32>>) -> Vec<(i
                     heuristic: heuristic(&neighbor, &goal),
                 });
             }
-
-            
         }
     }
-
     return vec![] // No path was found
 }
