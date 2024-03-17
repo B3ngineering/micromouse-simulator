@@ -14,6 +14,7 @@ use std::time::Duration;
 
 #[derive(Clone, Data, Lens)]
 
+// Data used in application
 struct CompData {
     mouse: mouse::Mouse,
     maze: maze::Maze,
@@ -23,6 +24,7 @@ struct CompData {
     travel_cost: c_double
 }
 
+// Path traversal for mouse
 fn traverse_path(data: &mut CompData) {
    for node in (*data.path).clone() {
        data.mouse.x = node.0;
@@ -31,6 +33,7 @@ fn traverse_path(data: &mut CompData) {
    }
 }
 
+// Caclulate travel cost based on consecutive cells and direction changes
 fn calculate_travel_cost(data: &mut CompData) {
     let mut node_prev = data.path[0];
     let mut iter = 0;
@@ -84,7 +87,10 @@ fn calculate_travel_cost(data: &mut CompData) {
     }
 }
 
+// Druid UI setup
 fn ui_builder() -> impl Widget<CompData> {
+
+    // Create maze on user interface
     let maze_painter = Painter::new(|ctx, data: &CompData, _env| {
         let size = ctx.size();
         let cell_size = size.width / data.maze.grid[0].len() as f64;
@@ -108,6 +114,7 @@ fn ui_builder() -> impl Widget<CompData> {
         }
     }).fix_size(200.0, 200.0); // Fixed size for simplicity
 
+    // Set up control buttons and labels for application
     let mouse_position_label = Label::dynamic(|data: &CompData, _env| {
         format!("Mouse Position: ({}, {})", data.mouse.x, -data.mouse.y)
     });
@@ -165,6 +172,8 @@ fn ui_builder() -> impl Widget<CompData> {
 }
 
 fn main() {
+
+    // Create test maze
     let maze_grid = vec![
         vec![1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
         vec![1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],

@@ -10,11 +10,13 @@ impl Maze {
         Maze { grid }
     }
 
+    // Check if cell is a wall cell or open space
     pub fn is_wall(&self, x: i32, y:i32) -> bool {
         if self.grid[y as usize][x as usize] == 1 { return true}
         else {return false};
     }
 
+    // Helper printing function
     pub fn print(&self) {
         let grid = &self.grid;
         for row in (*grid).iter() {
@@ -25,6 +27,7 @@ impl Maze {
         }
     }
 
+    // Get surroudning cells from current location
     pub fn get_neighbors(&self, row: usize, col: usize) -> Vec<(usize, usize)> {
         let mut neighbors = Vec::new();
         let rows = self.grid.len();

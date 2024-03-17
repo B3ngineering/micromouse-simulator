@@ -1,10 +1,14 @@
+/*
+    Rust implementation of flood fill algorithm. This algorithm was popularized for micromouse
+    solving, and stores data about each node as well as its neighbours to navigate the maze.
+*/
 
-use crate::maze::Maze; // Adjust import paths based on your project structure
-use crate::mouse::Mouse; // Adjust import paths based on your project structure
+
+use crate::maze::Maze;
+use crate::mouse::Mouse;
 use std::collections::VecDeque;
 
-// Assuming Maze and Cell structs are defined in a way that supports these operations
-
+// Flood fill traversal algorithm
 pub fn flood_fill(mouse: &mut Mouse, maze: &Maze, target_x: usize, target_y: usize) -> Vec<(i32, i32)> {
     let mut distances = vec![vec![i32::MAX; maze.grid[0].len()]; maze.grid.len()];
     let mut to_visit = VecDeque::new();
@@ -26,6 +30,7 @@ pub fn flood_fill(mouse: &mut Mouse, maze: &Maze, target_x: usize, target_y: usi
     navigate_maze(mouse, maze, distances)
 }
 
+// Maze navigation using flood fill to return path
 pub fn navigate_maze(mouse: &mut Mouse, maze: &Maze, distances: Vec<Vec<i32>>) -> Vec<(i32, i32)> {
     let (mut x, mut y) = (mouse.x as usize, -mouse.y as usize);
     let mut path = Vec::new();
